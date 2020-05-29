@@ -8,6 +8,7 @@ package com.ivankresic.kotlinlearning.inheritance
  * The root of the Kotlin class hierarchy. Every Kotlin class has [Any] as a superclass.
  */
 
+
 open class Person{
     open fun validate(){
 
