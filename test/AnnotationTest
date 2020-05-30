@@ -1,0 +1,10 @@
+/**
+ * Created by ivan on 30/05/2020
+ */
+
+class AnnotationTest{
+
+    @Test fun testAnnotation(){
+
+    }
+}
