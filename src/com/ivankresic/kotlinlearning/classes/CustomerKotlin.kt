@@ -1,10 +1,14 @@
 package com.ivankresic.kotlinlearning.classes
 
+import java.io.IOException
+
 /**
  * Created by ivan on 29/05/2020
  */
 
-data class CustomerKotlin(val id:Int, var name: String, var email: String){
+data class CustomerKotlin(val id:Int, var name: String, var email: String, val phone: String?){
+
+    @JvmField val someField = "Value"
 
     //it is possible to override toString, equalsTo and hashCode of data classes
     override fun toString(): String {
@@ -14,12 +18,39 @@ data class CustomerKotlin(val id:Int, var name: String, var email: String){
      * Trick when writing strings like this, you can edit it as JSON, and IDE will escape all special characters for you
      * -> empty string -> alt+enter -> inject language or reference -> Json -> alt+enter -> Json fragment
      * */
+
+
+    @JvmOverloads fun changeStatur(status: Status = Status.CURRENT){
+
+    }
+
+    @JvmName("preferential") fun makePrefered(){
+
+    }
+
+
+    @Throws(IOException::class) fun loadStatistics(filename: String){
+        if(filename ==""){
+            throw IOException("Filename cannot be blank")
+        }
+    }
+}
+
+fun CustomerKotlin.extension(){
+
+}
+
+enum class Status{
+    CURRENT,
+    PAST
 }
 
 fun main(args: Array<String>) {
 
-    val  customer1 = CustomerKotlin(1, "ivan", "ivan@email.com")
-    val  customer2 = CustomerKotlin(1, "ivan", "ivan@email.com")
+
+
+    val  customer1 = CustomerKotlin(1, "ivan", "ivan@email.com","123")
+    val  customer2 = CustomerKotlin(1, "ivan", "ivan@email.com", "123")
 
 
     //this print will display pointer object to the customer instance because there is no toString() built in ordinary class

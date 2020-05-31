@@ -44,7 +44,7 @@ fun main(args: Array<String>) {
 
 
     //So it can be used as follows
-    val (id, name, email) = CustomerKotlin(1, "Ivan", "Email")
+    val (id, name, email) = CustomerKotlin(1, "Ivan", "Email", "123")
     println(name)
 
 

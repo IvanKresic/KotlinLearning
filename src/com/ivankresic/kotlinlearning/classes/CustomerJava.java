@@ -1,5 +1,7 @@
 package com.ivankresic.kotlinlearning.classes;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 
 /**
@@ -37,6 +39,19 @@ public class CustomerJava {
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public void prettyPrint(){
+        System.out.printf("Id: %d - Name: %s", id, name);
+    }
+
+    public @NotNull  String neverNull(){
+        return "A string";
+    }
+
+    public String sometimesNull(){
+        return "A string!";
+    }
+
 
     @Override
     public String toString() {
