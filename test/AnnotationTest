@@ -1,4 +1,4 @@
-import org.junit.jupiter.api;
+import org.junit.Test
 
 /**
  * Created by ivan on 30/05/2020
@@ -6,6 +6,7 @@ import org.junit.jupiter.api;
 
 
 class AnnotationTest{
+
 
     @Test fun testAnnotation(){
 
